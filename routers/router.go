@@ -33,6 +33,9 @@ func InitRouter() *gin.Engine {
 	r.GET("/health", func(c *gin.Context) {
 		c.String(http.StatusOK, "OK")
 	})
+	r.GET("/health2", func(c *gin.Context) {
+		c.String(http.StatusOK, "OK")
+	})
 	r.POST("/auth", api.GetAuth)
 	r.GET("/api/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
